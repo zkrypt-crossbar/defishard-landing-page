@@ -17,13 +17,22 @@ git pull
 echo "📦 Installing dependencies..."
 npm install
 
+# Clear Next.js cache
+echo "🧹 Clearing cache..."
+rm -rf .next
+
 # Build Next.js
 echo "🔨 Building application..."
 npm run build
 
-# Restart with PM2
-echo "♻️  Restarting application..."
-pm2 restart defishard
+# Stop PM2 process
+echo "🛑 Stopping old process..."
+pm2 delete defishard 2>/dev/null || true
+
+# Start fresh with PM2
+echo "🚀 Starting application..."
+pm2 start ecosystem.config.js
+pm2 save
 
 # Show status
 echo ""
