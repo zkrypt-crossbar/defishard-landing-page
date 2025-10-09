@@ -2,12 +2,19 @@
 
 ###############################################################################
 # Update DefiShard Landing Page
-# Run this after pulling new code from git
+# Run this FROM /var/www/defishard/ directory
 ###############################################################################
 
 set -e
 
+# Check if we're in the right directory
+if [ ! -f "package.json" ]; then
+    echo "❌ Error: Run this script from /var/www/defishard/"
+    exit 1
+fi
+
 echo "🔄 Updating DefiShard..."
+echo "📍 Working directory: $(pwd)"
 
 # Pull latest code
 echo "📥 Pulling latest code..."
