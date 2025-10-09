@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { AlertTriangle } from 'lucide-react'
 
 export default function Stats() {
   const stats = [
@@ -18,18 +17,10 @@ export default function Stats() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-strong rounded-3xl p-8 md:p-12 border-2 border-danger/20"
+          className="glass-strong rounded-3xl p-8 md:p-12 border border-white/10"
         >
-          {/* Alert header */}
-          <div className="flex items-center gap-3 mb-8">
-            <div className="relative">
-              <AlertTriangle className="h-8 w-8 text-danger" />
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="absolute inset-0 blur-xl bg-danger/50"
-              />
-            </div>
+          {/* Header */}
+          <div className="mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-white">
               The Extension Wallet Crisis
             </h2>

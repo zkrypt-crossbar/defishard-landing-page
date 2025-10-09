@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { AlertCircle, X, Check } from 'lucide-react'
+import { AlertCircle } from 'lucide-react'
 
 export default function Problem() {
   const attacks = [
@@ -103,85 +103,55 @@ export default function Problem() {
           className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto"
         >
           {/* Traditional Wallet */}
-          <div className="glass-strong rounded-2xl p-8 border-2 border-danger/30">
-            <div className="flex items-center gap-3 mb-6">
-              <X className="h-8 w-8 text-danger" />
-              <h3 className="text-2xl font-bold">Traditional Extension</h3>
-            </div>
+          <div className="glass-strong rounded-2xl p-8 border-2 border-danger">
+            <h3 className="text-2xl font-bold mb-6">Traditional Extension</h3>
             
             <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <X className="h-5 w-5 text-danger flex-shrink-0 mt-1" />
-                <div>
-                  <div className="font-semibold mb-1">Private key exists in browser</div>
-                  <div className="text-sm text-gray-400">Complete key stored, ready to steal</div>
-                </div>
+              <div>
+                <div className="font-semibold mb-1">Private key exists in browser</div>
+                <div className="text-sm text-gray-400">Complete key stored, ready to steal</div>
               </div>
               
-              <div className="flex items-start gap-3">
-                <X className="h-5 w-5 text-danger flex-shrink-0 mt-1" />
-                <div>
-                  <div className="font-semibold mb-1">Single point of failure</div>
-                  <div className="text-sm text-gray-400">One compromise = total loss</div>
-                </div>
+              <div>
+                <div className="font-semibold mb-1">Single point of failure</div>
+                <div className="text-sm text-gray-400">One compromise = total loss</div>
               </div>
               
-              <div className="flex items-start gap-3">
-                <X className="h-5 w-5 text-danger flex-shrink-0 mt-1" />
-                <div>
-                  <div className="font-semibold mb-1">Vulnerable to malware</div>
-                  <div className="text-sm text-gray-400">Extensions can read everything</div>
-                </div>
+              <div>
+                <div className="font-semibold mb-1">Vulnerable to malware</div>
+                <div className="text-sm text-gray-400">Extensions can read everything</div>
               </div>
               
-              <div className="flex items-start gap-3">
-                <X className="h-5 w-5 text-danger flex-shrink-0 mt-1" />
-                <div>
-                  <div className="font-semibold mb-1">No transaction review</div>
-                  <div className="text-sm text-gray-400">Click-approve habit leads to scams</div>
-                </div>
+              <div>
+                <div className="font-semibold mb-1">No transaction review</div>
+                <div className="text-sm text-gray-400">Click-approve habit leads to scams</div>
               </div>
             </div>
           </div>
 
           {/* DefiShard */}
-          <div className="glass-strong rounded-2xl p-8 border-2 border-success/30">
-            <div className="flex items-center gap-3 mb-6">
-              <Check className="h-8 w-8 text-success" />
-              <h3 className="text-2xl font-bold">DefiShard</h3>
-            </div>
+          <div className="glass-strong rounded-2xl p-8 border-2 border-success">
+            <h3 className="text-2xl font-bold mb-6">DefiShard</h3>
             
             <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <Check className="h-5 w-5 text-success flex-shrink-0 mt-1" />
-                <div>
-                  <div className="font-semibold mb-1">Key never exists anywhere</div>
-                  <div className="text-sm text-gray-400">Distributed key generation—nothing to steal</div>
-                </div>
+              <div>
+                <div className="font-semibold mb-1">Key never exists anywhere</div>
+                <div className="text-sm text-gray-400">Distributed key generation—nothing to steal</div>
               </div>
               
-              <div className="flex items-start gap-3">
-                <Check className="h-5 w-5 text-success flex-shrink-0 mt-1" />
-                <div>
-                  <div className="font-semibold mb-1">No single point of failure</div>
-                  <div className="text-sm text-gray-400">Both devices required, even then key doesn\'t exist</div>
-                </div>
+              <div>
+                <div className="font-semibold mb-1">No single point of failure</div>
+                <div className="text-sm text-gray-400">Both devices required, even then key doesn\'t exist</div>
               </div>
               
-              <div className="flex items-start gap-3">
-                <Check className="h-5 w-5 text-success flex-shrink-0 mt-1" />
-                <div>
-                  <div className="font-semibold mb-1">Malware can\'t steal keys</div>
-                  <div className="text-sm text-gray-400">Key shares are cryptographically useless alone</div>
-                </div>
+              <div>
+                <div className="font-semibold mb-1">Malware can\'t steal keys</div>
+                <div className="text-sm text-gray-400">Key shares are cryptographically useless alone</div>
               </div>
               
-              <div className="flex items-start gap-3">
-                <Check className="h-5 w-5 text-success flex-shrink-0 mt-1" />
-                <div>
-                  <div className="font-semibold mb-1">Mobile transaction review</div>
-                  <div className="text-sm text-gray-400">See exactly what you\'re signing</div>
-                </div>
+              <div>
+                <div className="font-semibold mb-1">Mobile transaction review</div>
+                <div className="text-sm text-gray-400">See exactly what you\'re signing</div>
               </div>
             </div>
           </div>

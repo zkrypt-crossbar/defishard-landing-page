@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Lock, AlertTriangle, Check } from 'lucide-react'
+import { Lock } from 'lucide-react'
 
 export default function Security() {
 
@@ -34,20 +34,17 @@ export default function Security() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-strong rounded-2xl p-8 border-2 border-danger/30 mb-12"
+            className="glass-strong rounded-2xl p-8 border border-white/20 mb-12"
           >
-            <div className="flex items-start gap-4">
-              <AlertTriangle className="h-8 w-8 text-danger flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="text-2xl font-bold mb-4">Common Misunderstanding</h3>
-                <p className="text-gray-300 text-lg mb-4">
-                  Many people think MPC means <span className="text-white font-semibold">"split the key into two parts, then send them back together to sign."</span>
-                </p>
-                <p className="text-gray-400">
-                  <span className="text-danger font-semibold">This is WRONG and NOT secure.</span> If the key is ever reassembled (even temporarily), 
-                  you still have a single point of failure at that moment. Malware could intercept it during reassembly.
-                </p>
-              </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Common Misunderstanding</h3>
+              <p className="text-gray-300 text-lg mb-4">
+                Many people think MPC means <span className="text-white font-semibold">"split the key into two parts, then send them back together to sign."</span>
+              </p>
+              <p className="text-gray-400">
+                <span className="text-white font-semibold">This is incorrect.</span> If the key is ever reassembled (even temporarily), 
+                you still have a single point of failure at that moment. Malware could intercept it during reassembly.
+              </p>
             </div>
           </motion.div>
 
@@ -58,14 +55,9 @@ export default function Security() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="glass-strong rounded-2xl p-8 border-2 border-danger/30"
+              className="glass-strong rounded-2xl p-8 border-2 border-danger"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-danger/20 flex items-center justify-center">
-                  <AlertTriangle className="h-6 w-6 text-danger" />
-                </div>
-                <h3 className="text-xl font-bold">Wrong: "Split Key" Signing</h3>
-              </div>
+              <h3 className="text-xl font-bold mb-6">Wrong: "Split Key" Signing</h3>
 
               <div className="space-y-4">
                 {/* Step 1 */}
@@ -124,14 +116,9 @@ export default function Security() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="glass-strong rounded-2xl p-8 border-2 border-success/30"
+              className="glass-strong rounded-2xl p-8 border-2 border-success"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-success/20 flex items-center justify-center">
-                  <Check className="h-6 w-6 text-success" />
-                </div>
-                <h3 className="text-xl font-bold">Correct: Distributed Signing</h3>
-              </div>
+              <h3 className="text-xl font-bold mb-6">Correct: Distributed Signing</h3>
 
               <div className="space-y-4">
                 {/* Step 1 */}
@@ -197,29 +184,26 @@ export default function Security() {
             viewport={{ once: true }}
             className="mt-12 glass-strong rounded-2xl p-8 border border-primary/30 bg-gradient-to-br from-primary/5 to-transparent"
           >
-            <div className="flex items-start gap-4">
-              <Check className="h-8 w-8 text-success flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="text-2xl font-bold mb-4">The Critical Difference</h3>
-                <p className="text-gray-300 text-lg mb-6">
-                  In distributed signing, the complete private key <span className="text-white font-semibold">never exists anywhere</span>—not in memory, not in transit, not even for a microsecond. 
-                  The signature is produced through cryptographic cooperation between shares.
-                </p>
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-dark-elevated rounded-xl p-4 border border-danger/30">
-                    <div className="text-sm font-semibold text-danger mb-2">Wrong Approach</div>
-                    <div className="font-mono text-xs text-gray-400">
-                      privateKey = part1 + part2<br />
-                      signature = sign(privateKey, tx)
-                    </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">The Critical Difference</h3>
+              <p className="text-gray-300 text-lg mb-6">
+                In distributed signing, the complete private key <span className="text-white font-semibold">never exists anywhere</span>—not in memory, not in transit, not even for a microsecond. 
+                The signature is produced through cryptographic cooperation between shares.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-dark-elevated rounded-xl p-4 border border-danger/30">
+                  <div className="text-sm font-semibold text-danger mb-2">Wrong Approach</div>
+                  <div className="font-mono text-xs text-gray-400">
+                    privateKey = part1 + part2<br />
+                    signature = sign(privateKey, tx)
                   </div>
-                  <div className="bg-dark-elevated rounded-xl p-4 border border-success/30">
-                    <div className="text-sm font-semibold text-success mb-2">DefiShard Approach</div>
-                    <div className="font-mono text-xs text-gray-400">
-                      σ₁ = sign_partial(share1, tx)<br />
-                      σ₂ = sign_partial(share2, tx)<br />
-                      signature = combine(σ₁, σ₂)
-                    </div>
+                </div>
+                <div className="bg-dark-elevated rounded-xl p-4 border border-success/30">
+                  <div className="text-sm font-semibold text-success mb-2">DefiShard Approach</div>
+                  <div className="font-mono text-xs text-gray-400">
+                    σ₁ = sign_partial(share1, tx)<br />
+                    σ₂ = sign_partial(share2, tx)<br />
+                    signature = combine(σ₁, σ₂)
                   </div>
                 </div>
               </div>
