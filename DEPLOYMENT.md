@@ -23,7 +23,7 @@ sudo ./deploy.sh
 ✅ Installs Node.js, Nginx, PM2 (if not present)  
 ✅ Builds Next.js production site  
 ✅ Creates self-signed SSL certificate (365 days)  
-✅ Configures Nginx with SSL on port 8080  
+✅ Configures Nginx with SSL on port 443 (standard HTTPS)  
 ✅ Starts app with PM2 (auto-restart)  
 ✅ Configures firewall (if ufw present)  
 
@@ -32,8 +32,8 @@ sudo ./deploy.sh
 ## After Deployment
 
 ### Access Your Site:
-- **HTTP**: `http://your-server-ip` (redirects to HTTPS)
-- **HTTPS**: `https://your-server-ip:8080`
+- **HTTP**: `http://defishard.com` (redirects to HTTPS)
+- **HTTPS**: `https://defishard.com`
 
 ### Certificate Warning:
 ⚠️ Browser will show "Not Secure" (self-signed cert)  
@@ -130,7 +130,7 @@ sudo systemctl start nginx
 
 Required ports:
 - **80** (HTTP, redirects to HTTPS)
-- **8080** (HTTPS)
+- **443** (HTTPS - standard secure port)
 
 ```bash
 # Check firewall
@@ -138,7 +138,7 @@ sudo ufw status
 
 # Open ports if needed
 sudo ufw allow 80/tcp
-sudo ufw allow 8080/tcp
+sudo ufw allow 443/tcp
 sudo ufw enable
 ```
 
@@ -155,11 +155,11 @@ pm2 status
 # Check if Nginx is running
 sudo systemctl status nginx
 
-# Check port 3000
+# Check port 3000 (Next.js)
 curl http://localhost:3000
 
-# Check port 8080
-curl -k https://localhost:8080
+# Check port 443 (Nginx HTTPS)
+curl -k https://localhost:443
 ```
 
 ### View error logs:

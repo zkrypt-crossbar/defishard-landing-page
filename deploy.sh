@@ -14,7 +14,7 @@ DOMAIN="defishard.com"
 APP_DIR="/var/www/defishard"
 NGINX_CONF="/etc/nginx/sites-available/defishard"
 SSL_DIR="/etc/ssl/defishard"
-PORT=8080
+PORT=443  # Standard HTTPS port
 
 echo "🚀 Starting DefiShard deployment..."
 
@@ -77,12 +77,12 @@ cat > $NGINX_CONF << 'EOF'
 server {
     listen 80;
     server_name defishard.com www.defishard.com;
-    return 301 https://$host:8080$request_uri;
+    return 301 https://$host$request_uri;
 }
 
-# HTTPS server on port 8080
+# HTTPS server on standard port 443
 server {
-    listen 8080 ssl http2;
+    listen 443 ssl http2;
     server_name defishard.com www.defishard.com;
 
     # SSL Configuration
@@ -204,7 +204,6 @@ pm2 startup systemd -u root --hp /root
 if command -v ufw >/dev/null 2>&1; then
     echo "🔥 Configuring firewall..."
     ufw allow 80/tcp
-    ufw allow 8080/tcp
     ufw allow 443/tcp
     ufw --force enable
 fi
@@ -216,8 +215,8 @@ echo "✅  DefiShard deployed successfully!"
 echo "✅ ============================================="
 echo ""
 echo "📍 Access your site at:"
-echo "   🌐 HTTP:  http://defishard.com"
-echo "   🔒 HTTPS: https://defishard.com:8080"
+echo "   🌐 HTTP:  http://defishard.com (auto-redirects to HTTPS)"
+echo "   🔒 HTTPS: https://defishard.com"
 echo ""
 echo "📊 Useful commands:"
 echo "   Check status:  pm2 status"
