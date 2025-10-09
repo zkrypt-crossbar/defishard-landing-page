@@ -64,7 +64,7 @@ export default function Security() {
                 <div className="w-12 h-12 rounded-xl bg-danger/20 flex items-center justify-center">
                   <AlertTriangle className="h-6 w-6 text-danger" />
                 </div>
-                <h3 className="text-xl font-bold">❌ Wrong: "Split Key" Signing</h3>
+                <h3 className="text-xl font-bold">Wrong: "Split Key" Signing</h3>
               </div>
 
               <div className="space-y-4">
@@ -98,12 +98,12 @@ export default function Security() {
                 </div>
 
                 <div className="bg-dark-elevated rounded-xl p-4 border-2 border-danger/50">
-                  <div className="text-sm font-semibold text-danger mb-2">Step 3: Reassemble Key ⚠️</div>
+                  <div className="text-sm font-semibold text-danger mb-2">Step 3: Reassemble Key</div>
                   <div className="glass rounded-lg p-2 text-center text-xs mb-2 border border-danger/50">
                     Complete Private Key
                   </div>
-                  <div className="text-xs text-danger font-semibold">
-                    🚨 SINGLE POINT OF FAILURE
+                  <div className="text-xs text-danger font-semibold uppercase tracking-wider">
+                    SINGLE POINT OF FAILURE
                   </div>
                 </div>
 
@@ -130,7 +130,7 @@ export default function Security() {
                 <div className="w-12 h-12 rounded-xl bg-success/20 flex items-center justify-center">
                   <Check className="h-6 w-6 text-success" />
                 </div>
-                <h3 className="text-xl font-bold">✓ Correct: Distributed Signing</h3>
+                <h3 className="text-xl font-bold">Correct: Distributed Signing</h3>
               </div>
 
               <div className="space-y-4">
@@ -169,8 +169,8 @@ export default function Security() {
                     <div className="glass rounded-lg p-2 text-center text-xs">σ₁ = f(s₁)</div>
                     <div className="glass rounded-lg p-2 text-center text-xs">σ₂ = f(s₂)</div>
                   </div>
-                  <div className="text-xs text-success font-semibold">
-                    ✓ NO KEY RECONSTRUCTION
+                  <div className="text-xs text-success font-semibold uppercase tracking-wider">
+                    NO KEY RECONSTRUCTION
                   </div>
                 </div>
 
@@ -206,15 +206,15 @@ export default function Security() {
                   The signature is produced through cryptographic cooperation between shares.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-dark-elevated rounded-xl p-4">
-                    <div className="text-sm font-semibold text-danger mb-2">❌ Wrong Approach</div>
+                  <div className="bg-dark-elevated rounded-xl p-4 border border-danger/30">
+                    <div className="text-sm font-semibold text-danger mb-2">Wrong Approach</div>
                     <div className="font-mono text-xs text-gray-400">
                       privateKey = part1 + part2<br />
                       signature = sign(privateKey, tx)
                     </div>
                   </div>
-                  <div className="bg-dark-elevated rounded-xl p-4">
-                    <div className="text-sm font-semibold text-success mb-2">✓ DefiShard Approach</div>
+                  <div className="bg-dark-elevated rounded-xl p-4 border border-success/30">
+                    <div className="text-sm font-semibold text-success mb-2">DefiShard Approach</div>
                     <div className="font-mono text-xs text-gray-400">
                       σ₁ = sign_partial(share1, tx)<br />
                       σ₂ = sign_partial(share2, tx)<br />

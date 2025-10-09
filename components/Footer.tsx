@@ -95,7 +95,7 @@ export default function Footer() {
           </p>
           
           <div className="flex items-center gap-6 text-sm text-gray-400">
-            <span>Built with 💜 for DeFi security</span>
+            <span>Built for DeFi security</span>
           </div>
         </div>
       </div>
