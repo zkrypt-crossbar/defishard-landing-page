@@ -6,7 +6,7 @@ import EmailForm from '../EmailForm'
 
 export default function CTA() {
   return (
-    <section className="section">
+    <section id="cta" className="section">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
