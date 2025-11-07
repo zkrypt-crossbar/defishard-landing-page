@@ -57,7 +57,7 @@ export default function CTA() {
                   <a
                     href="/defishard-extension.zip"
                     download
-                    className="btn-primary w-full text-lg px-6 py-4 shadow-glow-lg inline-flex justify-center"
+                    className="btn-primary w-full text-lg px-6 py-4 shadow-glow-lg inline-flex items-center justify-center gap-2"
                   >
                     <span>Download Extension</span>
                     <ArrowRight className="h-5 w-5" />
@@ -91,7 +91,7 @@ export default function CTA() {
                 </div>
                 <div className="h-8 w-px bg-white/20" />
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-white">5 Minutes</div>
+                  <div className="text-2xl font-bold text-white">1 Minute</div>
                   <div className="text-sm text-gray-400">Setup time</div>
                 </div>
                 <div className="h-8 w-px bg-white/20" />

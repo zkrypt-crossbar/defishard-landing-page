@@ -37,7 +37,7 @@ export default function EmailForm() {
 
   return (
     <div className="space-y-4">
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 w-full">
         <input
           type="email"
           value={email}
@@ -47,12 +47,12 @@ export default function EmailForm() {
           disabled={status === 'loading'}
           className="flex-1 px-6 py-4 rounded-xl bg-white/5 border border-white/10 
                    text-white placeholder-white/40 focus:outline-none focus:border-blue-500/50
-                   disabled:opacity-50 transition-all"
+                   disabled:opacity-50 transition-all w-full sm:w-auto"
         />
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500
+          className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-blue-500 to-purple-500
                    hover:from-blue-600 hover:to-purple-600 disabled:opacity-50 disabled:cursor-not-allowed
                    transition-all duration-300 hover:scale-105 whitespace-nowrap"
         >
