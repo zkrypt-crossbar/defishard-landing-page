@@ -52,7 +52,7 @@ export default function CTA() {
                     <h3 className="text-2xl font-bold">Browser Extension</h3>
                   </div>
                   <p className="text-gray-300 mb-6">
-                    Download now for Chrome, Brave, and Edge browsers
+                    For Chrome, Brave, and Edge
                   </p>
                   <a
                     href="/defishard-extension.zip"

@@ -56,7 +56,7 @@ export default function EmailForm() {
                    hover:from-blue-600 hover:to-purple-600 disabled:opacity-50 disabled:cursor-not-allowed
                    transition-all duration-300 hover:scale-105 whitespace-nowrap"
         >
-          {status === 'loading' ? 'Joining...' : 'Join Waitlist'}
+          {status === 'loading' ? 'Joining...' : 'Join'}
         </button>
       </form>
       
