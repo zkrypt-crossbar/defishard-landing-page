@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Shield, Smartphone, ArrowRight, Check } from 'lucide-react'
+import { Shield, Smartphone, ArrowRight, Check, Chrome } from 'lucide-react'
 
 export default function Hero() {
   return (
@@ -45,13 +45,22 @@ export default function Hero() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="btn-primary text-lg px-8 py-4">
-                <span>Download DefiShard</span>
+              <a
+                href="/defishard-extension.zip"
+                download
+                className="btn-primary text-lg px-8 py-4 inline-flex"
+              >
+                <Chrome className="h-5 w-5" />
+                <span>Download Extension</span>
                 <ArrowRight className="h-5 w-5" />
-              </button>
-              <button className="btn-secondary text-lg px-8 py-4">
-                <span>See How It Works</span>
-              </button>
+              </a>
+              <a
+                href="#cta"
+                className="btn-secondary text-lg px-8 py-4 inline-flex"
+              >
+                <Smartphone className="h-5 w-5" />
+                <span>Get Mobile App</span>
+              </a>
             </div>
 
             {/* Trust Indicators */}

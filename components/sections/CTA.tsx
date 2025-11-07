@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ArrowRight, Chrome, Smartphone } from 'lucide-react'
+import EmailForm from '../EmailForm'
 
 export default function CTA() {
   return (
@@ -36,18 +37,50 @@ export default function CTA() {
                 Join thousands of users who sleep better knowing their assets are protected by distributed key technology
               </p>
 
-              {/* Download Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button className="btn-primary text-lg px-8 py-4 shadow-glow-lg">
-                  <Chrome className="h-6 w-6" />
-                  <span>Download Extension</span>
-                  <ArrowRight className="h-5 w-5" />
-                </button>
-                
-                <button className="btn-secondary text-lg px-8 py-4">
-                  <Smartphone className="h-6 w-6" />
-                  <span>Get Mobile App</span>
-                </button>
+              {/* Download Options */}
+              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                {/* Browser Extension */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  className="glass-effect rounded-2xl p-8 border border-white/10"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <Chrome className="h-8 w-8 text-blue-400" />
+                    <h3 className="text-2xl font-bold">Browser Extension</h3>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Download now for Chrome, Brave, and Edge browsers
+                  </p>
+                  <a
+                    href="/defishard-extension.zip"
+                    download
+                    className="btn-primary w-full text-lg px-6 py-4 shadow-glow-lg inline-flex justify-center"
+                  >
+                    <span>Download Extension</span>
+                    <ArrowRight className="h-5 w-5" />
+                  </a>
+                </motion.div>
+
+                {/* Mobile App */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                  className="glass-effect rounded-2xl p-8 border border-white/10"
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    <Smartphone className="h-8 w-8 text-purple-400" />
+                    <h3 className="text-2xl font-bold">Mobile App</h3>
+                  </div>
+                  <p className="text-gray-300 mb-6">
+                    Join the waitlist for iOS and Android
+                  </p>
+                  <EmailForm />
+                </motion.div>
               </div>
 
               {/* Trust Indicators */}
