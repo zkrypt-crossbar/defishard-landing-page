@@ -55,7 +55,7 @@ export default function CTA() {
                     For Chrome, Brave, and Edge
                   </p>
                   <a
-                    href="/defishard-extension.zip"
+                    href="/defishard-wallet-v1.1.0.zip"
                     download
                     className="btn-primary w-full text-lg px-6 py-4 shadow-glow-lg inline-flex items-center justify-center gap-2"
                   >
@@ -80,7 +80,7 @@ export default function CTA() {
                     For Android (Beta Testing)
                   </p>
                   <a
-                    href="/defishard-wallet-v1.1.0.zip"
+                    href="/DeFiShard-v1.0.1-signed-20251109.apk"
                     download
                     className="btn-primary w-full text-lg px-6 py-4 shadow-glow-lg inline-flex items-center justify-center gap-2 mb-6"
                   >
