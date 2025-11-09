@@ -76,10 +76,23 @@ export default function CTA() {
                     <Smartphone className="h-8 w-8 text-purple-400" />
                     <h3 className="text-2xl font-bold">Mobile App</h3>
                   </div>
-                  <p className="text-gray-300 mb-6">
-                    Join the waitlist for iOS and Android
+                  <p className="text-gray-300 mb-4">
+                    For Android (Beta Testing)
                   </p>
-                  <EmailForm />
+                  <a
+                    href="/defishard-wallet-v1.1.0.zip"
+                    download
+                    className="btn-primary w-full text-lg px-6 py-4 shadow-glow-lg inline-flex items-center justify-center gap-2 mb-6"
+                  >
+                    <span>Download APK</span>
+                    <ArrowRight className="h-5 w-5" />
+                  </a>
+                  <div className="border-t border-white/10 pt-6">
+                    <p className="text-gray-300 mb-4 text-sm">
+                      Join waitlist for iOS release
+                    </p>
+                    <EmailForm />
+                  </div>
                 </motion.div>
               </div>
 
