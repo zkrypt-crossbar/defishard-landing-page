@@ -46,7 +46,7 @@ export default function Hero() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="/defishard-wallet-v1.2.0.zip"
+                href="/defishard-wallet-v1.3.0.zip"
                 download
                 className="btn-primary text-lg px-8 py-4 inline-flex"
               >
