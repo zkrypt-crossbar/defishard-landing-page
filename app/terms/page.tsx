@@ -375,7 +375,7 @@ export default function TermsOfService() {
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-3">14.1 Informal Dispute Resolution</h3>
                   <p>
-                    Before filing a claim, you agree to contact us at <a href="mailto:legal@defishard.com" className="text-primary hover:underline">legal@defishard.com</a> and 
+                    Before filing a claim, you agree to contact us at <a href="mailto:info@defishard.com" className="text-primary hover:underline">info@defishard.com</a> and 
                     attempt to resolve the dispute informally. We will have 60 days to attempt resolution.
                   </p>
                 </div>
@@ -397,7 +397,7 @@ export default function TermsOfService() {
                     <p className="font-semibold text-white mb-2">Opt-Out Right:</p>
                     <p className="text-sm">
                       You may opt-out of arbitration within 30 days of first accepting these Terms by sending written notice to 
-                      <a href="mailto:legal@defishard.com" className="text-primary hover:underline ml-1">legal@defishard.com</a> with 
+                      <a href="mailto:info@defishard.com" className="text-primary hover:underline ml-1">info@defishard.com</a> with 
                       subject "Arbitration Opt-Out" and including your name and wallet address.
                     </p>
                   </div>
@@ -458,7 +458,7 @@ export default function TermsOfService() {
                 For questions about these Terms, contact us at:
               </p>
               <p className="mt-3">
-                Email: <a href="mailto:legal@defishard.com" className="text-primary hover:underline">legal@defishard.com</a>
+                Email: <a href="mailto:info@defishard.com" className="text-primary hover:underline">info@defishard.com</a>
               </p>
             </section>
 

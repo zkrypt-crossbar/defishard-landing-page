@@ -131,7 +131,7 @@ export default function PrivacyPolicy() {
               <h2 className="text-2xl font-bold text-white mb-4">7. Data Retention</h2>
               <p>
                 We retain your information only as long as necessary to provide our services. You can request deletion 
-                of your account data at any time by contacting us at <a href="mailto:privacy@defishard.com" className="text-primary hover:underline">privacy@defishard.com</a>.
+                of your account data at any time by contacting us at <a href="mailto:info@defishard.com" className="text-primary hover:underline">info@defishard.com</a>.
               </p>
             </section>
 
@@ -179,7 +179,7 @@ export default function PrivacyPolicy() {
                   <h3 className="text-xl font-semibold text-white mb-3">8.3 How to Exercise Your Rights</h3>
                   <p className="mb-3">To exercise any of these rights, contact us at:</p>
                   <div className="glass-effect rounded-lg p-4 border border-primary/30">
-                    <p>Email: <a href="mailto:privacy@defishard.com" className="text-primary hover:underline">privacy@defishard.com</a></p>
+                    <p>Email: <a href="mailto:info@defishard.com" className="text-primary hover:underline">info@defishard.com</a></p>
                     <p className="mt-2">Subject Line: "Data Rights Request - [Your Right]"</p>
                   </div>
                   <p className="mt-3 text-sm">
@@ -216,7 +216,7 @@ export default function PrivacyPolicy() {
                     If you have any questions about this Privacy Policy, please contact us at:
                   </p>
                   <div className="glass-effect rounded-lg p-4 border border-primary/30 mt-3">
-                    <p>Email: <a href="mailto:privacy@defishard.com" className="text-primary hover:underline">privacy@defishard.com</a></p>
+                    <p>Email: <a href="mailto:info@defishard.com" className="text-primary hover:underline">info@defishard.com</a></p>
                   </div>
                 </div>
 
@@ -226,7 +226,7 @@ export default function PrivacyPolicy() {
                     For GDPR-related inquiries, you can contact our Data Protection Officer:
                   </p>
                   <div className="glass-effect rounded-lg p-4 border border-primary/30">
-                    <p>Email: <a href="mailto:dpo@defishard.com" className="text-primary hover:underline">dpo@defishard.com</a></p>
+                    <p>Email: <a href="mailto:info@defishard.com" className="text-primary hover:underline">info@defishard.com</a></p>
                     <p className="mt-2 text-sm text-gray-400">Response time: Within 30 days of receipt</p>
                   </div>
                 </div>

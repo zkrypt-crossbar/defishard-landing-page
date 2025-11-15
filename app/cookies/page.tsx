@@ -273,7 +273,7 @@ export default function CookiePolicy() {
                 If you have questions about our use of cookies, please contact us at:
               </p>
               <p className="mt-3">
-                Email: <a href="mailto:privacy@defishard.com" className="text-primary hover:underline">privacy@defishard.com</a>
+                Email: <a href="mailto:info@defishard.com" className="text-primary hover:underline">info@defishard.com</a>
               </p>
             </section>
 
