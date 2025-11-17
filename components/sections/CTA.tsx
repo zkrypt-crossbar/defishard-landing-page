@@ -80,7 +80,7 @@ export default function CTA() {
                     For Android (Beta Testing)
                   </p>
                   <a
-                    href="/defishard-v1.1.0-1763363736-20251117_141713.apk"
+                    href="/defishard-v1.2.0-1763367532-20251117_151937.apk"
                     download
                     className="btn-primary w-full text-lg px-6 py-4 shadow-glow-lg inline-flex items-center justify-center gap-2 mb-6"
                   >
